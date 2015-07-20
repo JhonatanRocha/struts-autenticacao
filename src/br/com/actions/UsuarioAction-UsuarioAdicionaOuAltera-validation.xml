@@ -1,0 +1,30 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="usuario.nome">
+		<field-validator type="requiredstring">
+			<message>O nome do Usuário é obrigatório</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">30</param>
+			<message>O nome não pode possuir mais do que ${maxLength} letras.</message>
+		</field-validator>
+	</field>
+	
+	<field name="usuario.username">
+		<field-validator type="requiredstring">
+			<message>O username do usuário é obrigatório</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">10</param>
+			<param name="minLength">5</param>
+			<message>O usuário deve possuir no mínimo ${minLength} e no máximo ${maxLength} letras.</message>
+		</field-validator>
+	</field>
+	
+	<field name="usuario.password">
+		<field-validator type="requiredstring">
+			<message>A senha do usuário é obrigatória</message>
+		</field-validator>
+	</field>
+</validators>
